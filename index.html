@@ -2,38 +2,93 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width,
-    initial-scale=1.0">
-  <title>Mon Premier Site - GD 110</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de HUNLEDE, étudiant en Design Numérique à l'IPNET.">
+  <title>HUNLEDE - Portfolio | GD 110</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Bienvenue sur mon premier site web !</h1>
+    <h1 class="title">Bienvenue sur mon premier site web !</h1>
+        <nav class ="head">
+            <ul>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#objectifs">Objectifs</a></li>
+                <li><a href="#passions">Passions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
   </header>
   <main>
-    <section>
-      <h2>À propos de moi</h2>
+
+    <section id="apropos"> 
+    <h2>À propos de moi</h2>
+    <article>
+      <h3>Présentation</h3>
       <p>Je suis étudiant en Licence Design Numérique,
          Infographie & Multimédia à l'IPNET.</p>
       <p>Ceci est ma première page créée dans le cadre du cours
          <strong>GD 110 - Introduction au Webdesign</strong>.</p>
+    </article>
     </section>
-    <section>
+
+    <section id="objectifs">
       <h2>Mes objectifs pour ce cours</h2>
+      <article>
+      <h3>Compétences à acquérir</h3>
+    <nav>
       <ul>
         <li>Maîtriser HTML5 et CSS3.</li>
         <li>Concevoir des interfaces professionlles avec Figma.</li>
         <li>Concevoir des site web interactifs.</li>
       </ul>
+    </nav>
+      </article>
+    </section>
+
+    <section id="passions">
       <h2>Mes passions</h2>
+      <article>
+       <h3>Centres d'intérêt</h3>
+      <nav> 
       <ul>
         <li>Le design graphique.</li>
         <li>La création de contenu numérique.</li>
         <li>Le développement web.</li>
       </ul>
+      </nav>
+      </article>
+    </section>
+
+
+    <section id="contact">
+    <article>
+
+      <h2>Contact</h2>
+      <p>Pour me contacter, veuillez remplir le formulaire ci-dessous :</p>
+      </article>
+      <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <button type="submit">Envoyer</button>
+      </form>
     </section>
   </main>
+    <aside>
+        <h3>Liens utiles</h3>
+        <ul>
+            <li><a href="#">Mon GitHub</a></li>
+            <li><a href="#">Mon Portfolio</a></li>
+            <li><a href="#">Site de l'IPNET</a></li>
+        </ul>
+    </aside>
   <footer>
     <p>&copy; 2026 - HUNLEDE Hugues. Tous droits réservés.</p>
   </footer>
