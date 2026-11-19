@@ -70,15 +70,39 @@ margin-top: var(--espacement-standard);
 display: flex;
 }
 nav a {
-color: var(--couleur-blanc);
-text-decoration: none;
-font-weight: bold;
-padding: var(--espacement-petit) var(--espacement-standard);
-border-radius: var(--rayon-bordure);
-transition: background-color 0.3s ease;
+    color: var(--couleur-blanc);
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--espacement-petit) var(--espacement-standard);
+    border-radius: var(--rayon-bordure);
+    transition: all 0.3s ease; /* Transition fluide sur toutes les propriétés 
+*/
+    position: relative; /* Pour le pseudo-élément ::after */
 }
+/* Effet de survol */
 nav a:hover {
-background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Légère élévation */
+}
+/* Effet de focus (accessibilité clavier) */
+nav a:focus {
+    outline: 2px solid var(--couleur-blanc);
+    outline-offset: 2px;
+}
+/* Pseudo-élément : barre sous le lien au survol */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--couleur-blanc);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+nav a:hover::after {
+width: 80%;
 }
 
 /* ===== CONTENU PRINCIPAL ===== */
